@@ -1,79 +1,311 @@
-<!DOCTYPE html>
+<!DOCT<!DOCTYPE html<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tharun Pranav S J | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- FIGMA FONT SWAP: Replace the Google Fonts link below with your Figma font imports (e.g., Inter, Helvetica, Syne) -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #0000ff;
+            color: #ffffff;
+            
+            /* FIGMA FONT SWAP: Change 'Press Start 2P' below to your Figma body font-family name */
+            font-family: 'Press Start 2P', monospace;
+            
+            font-size: 14px;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .top-divider {
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.8);
+            margin: 0;
+        }
+
+        .page-container {
+            width: 100%;
+            padding: 0 3rem;
+        }
+
+        header {
+            padding: 5rem 0 6rem 0;
+        }
+
+        h1 {
+            /* FIGMA FONT SWAP: Change 'VT323' below to your Figma heading font-family name */
+            font-family: 'VT323', monospace;
+            
+            font-size: clamp(3.5rem, 8vw, 6rem);
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            line-height: 0.9;
+            max-width: 950px;
+            margin-bottom: 2.5rem;
+            text-transform: uppercase;
+        }
+
+        header p {
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.8);
+            width: 100%;
+        }
+
+        .section-grid {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            padding: 5rem 0;
+            gap: 4rem;
+        }
+
+        .section-title {
+            /* FIGMA FONT SWAP: Change 'VT323' below to your Figma heading font-family name */
+            font-family: 'VT323', monospace;
+            
+            font-size: 3rem;
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            line-height: 1;
+            text-transform: uppercase;
+        }
+
+        .section-intro {
+            font-size: 14px;
+            margin-bottom: 3.5rem;
+            line-height: 1.8;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .project-item {
+            padding-right: 3rem;
+            padding-left: 3rem;
+            border-left: 1px solid rgba(255, 255, 255, 0.8);
+        }
+
+        .project-item:first-child {
+            padding-left: 0;
+            border-left: none;
+        }
+
+        .project-item strong {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 1.25rem;
+            line-height: 1.5;
+        }
+
+        .project-item p {
+            font-size: 13px;
+            opacity: 0.9;
+            margin-bottom: 1.75rem;
+            line-height: 1.8;
+        }
+
+        a {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        a:hover {
+            opacity: 0.8;
+        }
+
+        .columns-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3.5rem;
+        }
+
+        .column-item h3 {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            opacity: 0.7;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+        }
+
+        .column-item p {
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3.5rem;
+        }
+
+        @media (max-width: 1024px) {
+            .section-grid {
+                grid-template-columns: 1fr;
+                padding: 4rem 0;
+                gap: 2.5rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .project-item {
+                padding-left: 0;
+                padding-right: 0;
+                border-left: none;
+                border-top: 1px solid rgba(255, 255, 255, 0.8);
+                padding-top: 2.5rem;
+            }
+
+            .project-item:first-child {
+                border-top: none;
+                padding-top: 0;
+            }
+
+            .columns-grid, .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 12px;
+            }
+
+            .page-container {
+                padding: 0 1.5rem;
+            }
+
+            header {
+                padding: 3rem 0 3.5rem 0;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .section-grid {
+                padding: 3rem 0;
+            }
+
+            .project-item strong {
+                font-size: 14px;
+            }
+
+            .project-item p {
+                font-size: 11px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Wrapped everything in a font tag to scale text and set a universal system font -->
-    <font face="Arial, Helvetica, sans-serif" size="4">
+    <hr class="top-divider">
 
+    <div class="page-container">
         <header>
-            <h1><font size="7">Tharun Pranav S J</font></h1>
-            <p><em>-- Developer --</em></p>
+            <h1>Tharun Pranav S J</h1>
+            <p>Dev interested in Graphical Programming and doing fun, cool stuff.</p>
         </header>
 
         <hr>
 
         <main>
-            <section id="about">
-                <h2><font size="5">About Me</font></h2>
-                <p>Dev interested in Graphical Programming and doing fun, cool stuff.</p>
+            <section id="projects" class="section-grid">
+                <h2 class="section-title">Featured Projects</h2>
+                <div>
+                    <p class="section-intro">Here are some of the things I've been working on. You can view all of my work directly on my <a href="https://github.com/Leonuraht" target="_blank" rel="noreferrer">GitHub Profile</a>.</p>
+                    
+                    <div class="projects-grid">
+                        <div class="project-item">
+                            <strong>OpenGL RayTracer</strong>
+                            <p>Ray Tracer built using OpenGL.</p>
+                            <a href="https://github.com/Leonuraht/RayTracerGL" target="_blank" rel="noreferrer">View Repository</a>
+                        </div>
+                        <div class="project-item">
+                            <strong>Voxel Engine</strong>
+                            <p>Simple Optimized Voxel Engine which uses Perlin noise and has dynamic chunk generation.</p>
+                            <a href="https://github.com/Leonuraht/VoxelEGL" target="_blank" rel="noreferrer">View Repository</a>
+                        </div>
+                        <div class="project-item">
+                            <strong>Zebra Programming Language</strong>
+                            <p>Programming Language created for game development with OpenGL.</p>
+                            <a href="https://github.com/Leonuraht/Zebra" target="_blank" rel="noreferrer">View Repository</a>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <hr>
 
-            <section id="projects">
-                <h2><font size="5">Featured Projects</font></h2>
-                <p>Here are some of the things I've been working on. You can view all of my work directly on my <a href="https://github.com/Leonuraht" target="_blank">GitHub Profile</a>.</p>
-                
-                <ul>
-                    <li>
-                        <strong><font size="4">OpenGL RayTracer</font></strong>
-                        <br>Ray Tracer built using OpenGL.
-                        <br><a href="https://github.com/Leonuraht/RayTracerGL" target="_blank">View Repository</a>
-                    </li>
-                    <br>
-                    <li>
-                        <strong><font size="4">Voxel Engine</font></strong>
-                        <br>Simple Optimized Voxel Engine which uses Perlin noise and has dynamic chunk generation.
-                        <br><a href="https://github.com/Leonuraht/VoxelEGL" target="_blank">View Repository</a>
-                    </li>
-                    <br>
-                    <li>
-                        <strong><font size="4">Zebra Programming Language</font></strong>
-                        <br>Programming Language created for game development with OpenGL.
-                        <br><a href="https://github.com/Leonuraht/Zebra" target="_blank">View Repository</a>
-                    </li>
-                </ul>
+            <section id="skills" class="section-grid">
+                <h2 class="section-title">Skills & Technologies</h2>
+                <div class="columns-grid">
+                    <div class="column-item">
+                        <h3>Languages</h3>
+                        <p>C, C++, Rust, Python</p>
+                    </div>
+                    <div class="column-item">
+                        <h3>Tools & Frameworks</h3>
+                        <p>OpenGL, Git, GitHub</p>
+                    </div>
+                    <div class="column-item">
+                        <h3>Core Concepts</h3>
+                        <p>Graphical Programming, Object-Oriented Programming, Systems Programming</p>
+                    </div>
+                </div>
             </section>
 
             <hr>
 
-            <section id="skills">
-                <h2><font size="5">Skills & Technologies</font></h2>
-                <ul>
-                    <li><strong>Languages:</strong> C, C++, Rust, Python</li>
-                    <li><strong>Tools & Frameworks:</strong> OpenGL, Git, GitHub</li>
-                    <li><strong>Core Concepts:</strong> Graphical Programming, Object-Oriented Programming, Systems Programming</li>
-                </ul>
-            </section>
-
-            <hr>
-
-            <section id="contact">
-                <h2><font size="5">Get In Touch</font></h2>
-                <ul>
-                    <li><strong>GitHub:</strong> <a href="https://github.com/Leonuraht" target="_blank">github.com/Leonuraht</a></li>
-                    <li><strong>Email:</strong> <a href="mailto:sjtharunpranav@gmail.com">sjtharunpranav@gmail.com</a></li>
-                </ul>
+            <section id="contact" class="section-grid">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-grid">
+                    <div class="column-item">
+                        <h3>GitHub</h3>
+                        <p><a href="https://github.com/Leonuraht" target="_blank" rel="noreferrer">github.com/Leonuraht</a></p>
+                    </div>
+                    <div class="column-item">
+                        <h3>Email</h3>
+                        <p><a href="mailto:sjtharunpranav@gmail.com">sjtharunpranav@gmail.com</a></p>
+                    </div>
+                </div>
             </section>
         </main>
 
         <hr>
+    </div>
 
-    </font>
 </body>
 </html>
