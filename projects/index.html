@@ -106,6 +106,284 @@
             border-left: none;
         }
 
+        /* NEW CSS: Image styling to fit perfectly inside the project items */
+        .project-item img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 1.25rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            display: block;
+        }
+
+        .project-item strong {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 1.25rem;
+            line-height: 1.5;
+        }
+
+        .project-item p {
+            font-size: 13px;
+            opacity: 0.9;
+            margin-bottom: 1.75rem;
+            line-height: 1.8;
+        }
+
+        a {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        a:hover {
+            opacity: 0.8;
+        }
+        
+        .back-link {
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 1024px) {
+            .section-grid {
+                grid-template-columns: 1fr;
+                padding: 4rem 0;
+                gap: 2.5rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .project-item {
+                padding-left: 0;
+                padding-right: 0;
+                border-left: none;
+                border-top: 1px solid rgba(255, 255, 255, 0.8);
+                padding-top: 2.5rem;
+            }
+
+            .project-item:first-child {
+                border-top: none;
+                padding-top: 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 12px;
+            }
+
+            .page-container {
+                padding: 0 1.5rem;
+            }
+
+            header {
+                padding: 3rem 0 3.5rem 0;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .section-grid {
+                padding: 3rem 0;
+            }
+
+            .project-item strong {
+                font-size: 14px;
+            }
+
+            .project-item p {
+                font-size: 11px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <hr class="top-divider">
+
+    <div class="page-container">
+        <header>
+            <a href="/" class="back-link">&larr; Back to Home</a>
+            <h1>All Projects</h1>
+            <p>A complete archive of my repositories, experiments, and tools.</p>
+        </header>
+
+        <hr>
+
+        <main>
+            <section id="projects" class="section-grid">
+                <h2 class="section-title">Archive</h2>
+                <div>
+                    <p class="section-intro">Here is the full list of things I've built. Check out my <a href="https://github.com/Leonuraht" target="_blank" rel="noreferrer">GitHub Profile</a> to see what I'm currently working on.</p>
+                    
+                    <div class="projects-grid">
+                        
+                        <!-- PROJECT 1 -->
+                        <div class="project-item">
+                            <img src="../images/edited_ray.png" alt="OpenGL RayTracer preview">
+                            <strong>OpenGL RayTracer</strong>
+                            <p>Ray Tracer built using OpenGL.</p>
+                            <a href="https://github.com/Leonuraht/RayTracerGL" target="_blank" rel="noreferrer">View Repository</a>
+                        </div>
+                        
+                        <!-- PROJECT 2 -->
+                        <div class="project-item">
+                            <img src="../images/edited_voxelE(1).png" alt="Voxel Engine preview">
+                            <strong>Voxel Engine</strong>
+                            <p>Simple Optimized Voxel Engine which uses Perlin noise and has dynamic chunk generation.</p>
+                            <a href="https://github.com/Leonuraht/VoxelEGL" target="_blank" rel="noreferrer">View Repository</a>
+                        </div>
+                        
+                        <!-- PROJECT 3 -->
+                        <div class="project-item">
+                            <img src="../images/vfvbf.jpg" alt="Zebra Programming Language placeholder">
+                            <strong>Zebra Programming Language</strong>
+                            <p>Programming Language created for game development with OpenGL.</p>
+                            <a href="https://github.com/Leonuraht/Zebra" target="_blank" rel="noreferrer">View Repository</a>
+                        </div>
+
+                        <!-- FUTURE PROJECTS GO HERE -->
+                        <!-- To add a new project, just copy the block below and paste it right here: 
+                        
+                        <div class="project-item">
+                            <img src="../images/your_image.png" alt="Description">
+                            <strong>New Project Name</strong>
+                            <p>Description goes here.</p>
+                            <a href="LINK_GOES_HERE" target="_blank" rel="noreferrer">View Repository</a>
+                        </div>
+                        
+                        -->
+
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <hr>
+    </div>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Projects | Tharun Pranav S J</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #0000ff;
+            color: #ffffff;
+            font-family: 'Press Start 2P', monospace;
+            font-size: 14px;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .top-divider {
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.8);
+            margin: 0;
+        }
+
+        .page-container {
+            width: 100%;
+            padding: 0 3rem;
+        }
+
+        header {
+            padding: 5rem 0 6rem 0;
+        }
+
+        h1 {
+            font-family: 'VT323', monospace;
+            font-size: clamp(3.5rem, 8vw, 6rem);
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            line-height: 0.9;
+            max-width: 950px;
+            margin-bottom: 2.5rem;
+            text-transform: uppercase;
+        }
+
+        header p {
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.8);
+            width: 100%;
+        }
+
+        .section-grid {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            padding: 5rem 0;
+            gap: 4rem;
+        }
+
+        .section-title {
+            font-family: 'VT323', monospace;
+            font-size: 3rem;
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            line-height: 1;
+            text-transform: uppercase;
+        }
+
+        .section-intro {
+            font-size: 14px;
+            margin-bottom: 3.5rem;
+            line-height: 1.8;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            row-gap: 3rem; 
+        }
+
+        .project-item {
+            padding-right: 3rem;
+            padding-left: 3rem;
+            border-left: 1px solid rgba(255, 255, 255, 0.8);
+        }
+
+        .project-item:nth-child(3n+1) {
+            padding-left: 0;
+            border-left: none;
+        }
+
         .project-item strong {
             display: block;
             font-size: 16px;
