@@ -1,4 +1,4 @@
-<!DOCT<!DOCTYPE html<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,8 +6,7 @@
     <title>Tharun Pranav S J | Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <!-- FIGMA FONT SWAP: Replace the Google Fonts link below with your Figma font imports (e.g., Inter, Helvetica, Syne) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
 
     <style>
@@ -100,6 +99,7 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 1rem;
+            row-gap: 3rem; 
         }
 
         .project-item {
@@ -108,7 +108,7 @@
             border-left: 1px solid rgba(255, 255, 255, 0.8);
         }
 
-        .project-item:first-child {
+        .project-item:nth-child(3n+1) {
             padding-left: 0;
             border-left: none;
         }
@@ -134,6 +134,17 @@
 
         a:hover {
             opacity: 0.8;
+        }
+
+        /* NEW CSS for the "More Projects" box */
+        .project-item.more-projects {
+            grid-column: 1 / -1; /* Spans across all 3 columns */
+            border-left: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.8); /* Horizontal line to separate it */
+            padding-left: 0;
+            padding-right: 0;
+            padding-top: 3rem; /* Space above */
+            text-align: center; /* Centers the text so it looks like a banner */
         }
 
         .columns-grid {
@@ -185,6 +196,10 @@
             .project-item:first-child {
                 border-top: none;
                 padding-top: 0;
+            }
+
+            .project-item.more-projects {
+                padding-top: 2.5rem;
             }
 
             .columns-grid, .contact-grid {
@@ -260,8 +275,14 @@
                         </div>
                         <div class="project-item">
                             <strong>Zebra Programming Language</strong>
-                            <p>Programming Language created for game development with OpenGL / wgpu.</p>
+                            <p>Programming Language created for game development with OpenGL.</p>
                             <a href="https://github.com/Leonuraht/Zebra" target="_blank" rel="noreferrer">View Repository</a>
+                        </div>
+                        
+                        <div class="project-item more-projects">
+                            <strong>More Projects</strong>
+                            <p>Explore other experiments, tools, and repositories I've built.</p>
+                            <a href="/projects">View All Projects</a>
                         </div>
                     </div>
                 </div>
@@ -274,7 +295,7 @@
                 <div class="columns-grid">
                     <div class="column-item">
                         <h3>Languages</h3>
-                        <p>C, C++, Rust, Python, Java</p>
+                        <p>C, C++, Rust, Python</p>
                     </div>
                     <div class="column-item">
                         <h3>Tools & Frameworks</h3>
